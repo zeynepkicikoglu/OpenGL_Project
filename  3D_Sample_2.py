@@ -7,17 +7,17 @@ import sys
 aci=50
 def draw():
     global aci
-    glClearColor(0.0, 0.0, 0.0, 0.0)
+    glClearColor(1.0, 1.0, 0.0, 0.0)
     glClear(GL_COLOR_BUFFER_BIT)
     glViewport(0, 0, 500, 500)
     glLoadIdentity()
-    glMatrixMode(GL_MODELVIEW)
-    glColor3f(0, 0, 1)  # Draw     BLUE
-    glRotatef(aci, 0, 0, 1)
+    #glMatrixMode(GL_MODELVIEW)
+    glColor3f(1, 0, 0)  # Draw     BLUE
+    glRotatef(aci, 1, 1, 1)
     glutWireTeapot(0.5)
     glFlush()
 
-    aci+=1
+    aci+=10
 
 
 def main():

@@ -37,7 +37,7 @@ def main():
     glutInit(sys.argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB)
     glutInitWindowSize(500, 500)
-    glutInitWindowPosition(10, 10)
+    glutInitWindowPosition(300, 300)
     glutCreateWindow(b"3D teapot Sample")
     glutDisplayFunc(draw)
     glutIdleFunc(draw)

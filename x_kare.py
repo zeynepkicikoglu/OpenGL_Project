@@ -5,7 +5,7 @@ import sys
 
 def init():
     glClearColor(1.0, 1.0, 1.0, 1.0) #arka plan rengi mat ve beyaz olarak ayarlandı.
-    gluOrtho2D(-5.0, 5.0, -5.0, 25.0)  # x ekseni -5 ile 5 arasında, y ekseni -5 ile 25 arasında olacak şekilde ayarlandı.
+    gluOrtho2D(-3.0, 3.0, -5.0, 25.0)  # x ekseni -5 ile 5 arasında, y ekseni -5 ile 25 arasında olacak şekilde ayarlandı.
 
 def plot_function():
     glClear(GL_COLOR_BUFFER_BIT)
@@ -13,8 +13,8 @@ def plot_function():
     glLineWidth(2.0)
     
     glBegin(GL_LINE_STRIP)
-    for x in range(-50, 51):  # x değerleri -5 ile 5 arasında
-        glVertex2f(x / 10.0, (x / 10.0) ** 2)  # f(x) = x^2 fonksiyonu
+    for x in range(-30, 31):  # x değerleri -5 ile 5 arasında
+        glVertex2f(x / 10.0, (2*(x / 10.0) ** 3)+(3*(x / 10.0) ** 2)-5)  # f(x) = x^2 fonksiyonu
     glEnd()
     
     glFlush()

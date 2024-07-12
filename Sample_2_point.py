@@ -10,7 +10,7 @@ def plotpoints():#İstediğiniz ismi verebilirsiniz
     glClear(GL_COLOR_BUFFER_BIT)
     glColor3f(1.0, 0.0, 0.0)
 
-    glPointSize(10.0)
+    glPointSize(100.0)
     glBegin(GL_POINTS)
     glVertex2f(0.0, 0.0)
     glEnd()

@@ -3,12 +3,15 @@ from OpenGL.GL import *
 import sys
 
 def ciz():
+    glClearColor(1.0,0.0,0.0,0.0)
+    glClear(GL_COLOR_BUFFER_BIT)
+    glColor3f(0.0,1.0,0.0)
 
-    #glutWireTeapot(0.5)
-    #glutWireCube(1.0);
-    #glutWireCone(1, 1, 10, 10);
-    #glutWireSphere(0.5, 10, 10);
-    glutWireTorus(1, 1, 50, 50)
+    glutWireTeapot(0.5)
+    #glutWireCube(1.0)
+    #glutWireCone(1, 1, 10, 10)
+    #glutWireSphere(0.5, 10, 10)
+    #glutWireTorus(1, 1, 50, 50)
 
     glFlush()
 
