@@ -1,0 +1,99 @@
+Bu proje; Zeynep Kıcıkoğlu, Abdullah Karataş, Mehmet Eren Ekiz, Ardan Özpolat tarafından yapılmıştır. Bu süre zarfında ekipçe proje hakkında araştırma, örnek kod araştırması, kullanılacak element/figürlerin bulunması, konuyu daha iyi öğrenmek için kaynak bulunması gibi gereksinimler sağlanıp giderilmiştir. Bu proje sayesinde bilmediğimiz bir sürü şey öğrenilmiştir. Zorlandığımız kısımlarda Chatgpt, google, YouTube, udemy gibi platformlardan destek alınmıştır. 
+
+
+
+KOD AÇIKLAMASI:
+
+Kullanılan kütüphaneler: 
+1) OpenGL (OpenGL.GL):
+
+OpenGL, 3D grafikler oluşturmak, işlemek ve görüntülemek için kullanılan bir grafik API'sidir.
+
+OpenGL.GL modülü, Python'da OpenGL işlevlerine erişmek için bir arayüz sağlar.
+
+2) NumPy (numpy):
+
+NumPy, Python'da bilimsel hesaplama için kullanılan temel bir kütüphanedir.
+
+Vektör ve matris işlemleri için optimize edilmiş fonksiyonlar ve veri yapıları içerir.
+
+3) GLFW (glfw):
+
+GLFW, OpenGL için taşınabilir bir pencere ve giriş API'sidir.
+
+Pencere oluşturma, kullanıcı girişi işleme, zaman yönetimi gibi işlevleri sağlar.
+
+4) Pyrr:
+
+Pyrr, Python'da matematiksel vektör ve matris işlemleri yapmak için kullanılan bir kütüphanedir.
+
+Matrisler, dönüşümler ve quaternions gibi grafik programlamada sıkça kullanılan hesaplamaları destekler.
+
+5) ctypes:
+
+ctypes, Python'da C diliyle yazılmış kütüphanelere erişmek için kullanılan bir modüldür.
+
+Bu projede, OpenGL'ye bağlı C işlevlerine erişmek için kullanılmıştır.
+
+6) os:
+
+Python'un dahili bir modülüdür ve işletim sistemi işlevlerine erişim sağlar.
+
+Bu projede, dosya yolu kontrolü ve dosya varlığının kontrolü gibi işlemler için kullanılmıştır.
+
+
+Bu kütüphaneler, OpenGL ile grafik nesneleri oluşturmayı, işlemeyi ve görüntülemeyi, kullanıcı girişini işlemeyi, matematiksel hesaplamalar yapmayı ve işletim sistemi işlevlerine erişmeyi sağlar. Bu projede, 3D grafikler oluşturmak için OpenGL, verileri işlemek ve matematiksel hesaplamalar yapmak için NumPy ve Pyrr, pencere ve kullanıcı girişini yönetmek için GLFW, ctypes ile OpenGL'e erişim sağlanmıştır.
+
+
+
+DOSYALARIN AÇIKLANMASI:
+
+1. cpe3d.py
+
+Bu dosya, 3D nesnelerin temel özelliklerini ve dönüşümlerini içeren bir Python modülünü tanımlar.
+
+Object3D Sınıfı: 3D nesnelerin temel özelliklerini ve dönüşümlerini yönetir.
+__init__(self, vertices, faces, program): Nesne özelliklerini başlatır.
+draw(self): 3D nesneyi çizer.
+load_texture(self, filename): Dokuya yükleme yapar.
+is_inside(self, x, y): Belirtilen koordinatın nesnenin içinde olup olmadığını kontrol eder.
+
+2. mesh.py
+
+Bu dosya, bir 3B meshin temsilini oluşturan Mesh sınıfını içerir.
+
+Mesh Sınıfı: 3B mesh nesnelerinin yüklenmesi, normalleştirilmesi ve GPU'ya yüklenmesi gibi işlevleri yönetir.
+__init__(self): Mesh özelliklerini başlatır.
+normalize(self): Meshin normalizasyonunu yapar.
+apply_matrix(self, m): Matris dönüşümünü uygular.
+load_to_gpu(self): Mesh verilerini GPU'ya yükler.
+get_nb_triangles(self): Üçgen sayısını döndürür.
+load_obj(filename): OBJ dosyasından mesh yükler.
+
+3. viewerGL.py
+
+Bu dosya, OpenGL kullanarak bir 3D görüntüleyici uygulamasını tanımlar.
+
+ViewerGL Sınıfı: Ana pencereyi ve oyun döngüsünü yönetir.
+__init__(self, nb_asteroid, nb_ring): OpenGL penceresini başlatır ve oyun parametrelerini ayarlar.
+Diğer metotlar: Klavye ve fare olaylarını yönetir, nesneleri günceller, oyun döngülerini çalıştırır.
+
+4. vertex.glsl
+
+Bu dosya, vertex shader'ın GLSL kodunu içerir. 3B nesnelerin koordinat dönüşümlerini işler.
+
+5. fragment.glsl
+
+Bu dosya, fragment shader'ın GLSL kodunu içerir. Nesnelerin fragmentlerinin render edilmesini sağlar.
+
+6. skybox.glsl
+
+Bu dosya, skybox için kullanılan shader'ın GLSL kodunu içerir. Skybox'ın render edilmesini sağlar.
+
+
+
+
+
+
+
+
